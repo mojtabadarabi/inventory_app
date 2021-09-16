@@ -1,0 +1,91 @@
+.navbar{
+    background-color: #253646;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    color: #efefef;
+    height: 36px;
+}
+a,a:hover{
+    text-decoration: none;
+    
+}
+.marginY{
+    margin: auto 20px !important;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: auto 8px;
+}
+.button{
+    outline: none;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    color: #efefef;
+    font-size: 18px;
+    margin: auto 8px;
+}
+.divider{
+    background-color: #efefef;
+    width: 2px;
+    opacity: .3;
+    border-radius: 8px;
+
+}
+.positionRelative{
+    position: relative;
+}
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 1px 6px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+  }
+  .icon{
+    color:white;
+    margin-top: 5px;
+  }
+  .inputText{
+    outline: none;
+    background-color: inherit;
+    font-size: 18px; 
+    border: none;
+    direction: rtl;
+    width: 120px;
+    transition: all ease .5s;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  .inputText:focus{
+    background-color: #efefef;
+    width: 200px;
+    
+  }
+
+input::-webkit-input-placeholder {
+    color: white;
+}
+input:focus::-webkit-input-placeholder {
+    color: black;
+}
+.logoContainer{
+    display:grid;
+    margin-top:-8px;
+}
+.companyName{
+    font-size:18px;
+}
+.companyDescription{
+    font-size:14px;
+}

@@ -1,0 +1,9 @@
+.section{
+    background-color: #efefef;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    color: #253646;
+    direction: rtl;
+    width: 80%;
+}
