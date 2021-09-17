@@ -18,9 +18,15 @@ a,a:hover{
     color: #efefef;
     width: 100%;
     padding:0 8px;
-    color: white;
     display: block;
     text-decoration: none;
+    
+}
+a:hover{
+    color: #1D7EAA;
+}
+a:focus{
+    color: #1D7EAA;
 }
 li{
     width: 100%;
@@ -46,4 +52,28 @@ li:hover{
     0 100px 80px rgba(0, 0, 0, 0.12);
     margin-right: 20px;
     width: 90%;
+    color: #1D7EAA;
+}
+.active{
+    color: #1D7EAA;
+    background-color: red;
+}
+.button{
+    outline: none;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    color: #efefef;
+    font-size: 18px;
+    padding:auto 8px;
+    text-decoration: none;
+}
+.button:focus{
+    color: #1D7EAA;
+}
+.button:hover{
+    color: #1D7EAA;
+}
+.icon{
+    padding-left: 8px;
 }

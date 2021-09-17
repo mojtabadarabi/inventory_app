@@ -73,10 +73,12 @@ a,a:hover{
     
   }
 
-input::-webkit-input-placeholder {
+
+
+input::placeholder{
     color: white;
 }
-input:focus::-webkit-input-placeholder {
+input:focus::placeholder{
     color: black;
 }
 .logoContainer{

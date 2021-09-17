@@ -31,7 +31,7 @@ function NavBar() {
                 </form>
                 <a href='#' className={`${style.button} ${style.marginY}`} >
                     <div className={style.logoContainer}>
-                        <spna className={style.companyName}>انبار دار </spna>
+                        <span className={style.companyName}>انبار دار </span>
                         <span className={style.companyDescription}>مدیریت انبار </span>
                     </div>
                 </a>

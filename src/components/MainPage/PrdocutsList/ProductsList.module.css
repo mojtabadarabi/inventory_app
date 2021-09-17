@@ -1,0 +1,78 @@
+.container{
+    background-color: #FFFFFF;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+}
+.tableHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.filterList{
+    border: 1px solid #e5e5e5;
+    outline: none;
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+    font-family: 'Yekan';
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #DFDFDF;
+}
+.filterOption{
+    padding: 5px;
+    font-family: 'Yekan';
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin: 28px auto !important;
+}
+select option {
+    padding: 15px;
+    font-family: 'Yekan';
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+table{
+    border: 1px solid #f2f2f2;
+    text-align: center;
+    border: none;
+    border-spacing: 0px;
+    padding:5px;
+}
+thead{
+    opacity: .6;
+}
+tbody tr:hover{
+    cursor: pointer;
+    background-color: #f2f2f2;
+    padding: 8px auto;
+    
+}
+
+tbody tr td{
+    padding: 15px;
+}
+input[type="checkbox"] {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+
+}
+input[type="checkbox"]:hover {
+    background-color: #ccc;
+}
+input[type="checkbox"]:checked {
+    background-color: #2196F3;
+}

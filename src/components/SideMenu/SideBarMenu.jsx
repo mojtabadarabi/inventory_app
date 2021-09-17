@@ -13,31 +13,41 @@ function SideBarMenu() {
         <nav className={style.sideMenu}>
             <ul>
                 <li >
-                    <FaCreativeCommonsNd/>
-                    <a href="#">داشبورد</a>
+                    <button className={style.button}>
+                    <FaCreativeCommonsNd className={style.icon}/>
+                    داشبورد
+                    </button>
                 </li>
                 <li >
-                    <FaInbox/>
-                    <a href="#">صندوق</a>
+                    <button className={style.button}>
+                    <FaInbox className={style.icon}/>
+                    صندوق
+                    </button>
                 </li>
                 <li >
-                    <FaProductHunt/>
-                    <a href="#">محصولات</a>
+                    <button className={style.button}>
+                    <FaProductHunt className={style.icon}/>
+                    محصولات
+                    </button>
                 </li>
                 <li >
-                    <FaCommentsDollar/>
-                    <a href="#">مشتری ها</a>
+                    <button className={style.button}>
+                    <FaCommentsDollar className={style.icon}/>
+                    مشتری ها
+                    </button>
                 </li>
                 <li >
-                    <FaBlind/>
-                    <a href="#">راهنمای سامانه </a>
+                    <button className={style.button}>
+                    <FaBlind className={style.icon}/>
+                    راهنمای سامانه 
+                    </button>
                 </li>
                 <li >
-                    <FaCog/>
-                    <a href="#">تنظیمات</a>
+                    <button className={style.button}>
+                    <FaCog className={style.icon}/>
+                    تنظیمات
+                    </button>
                 </li>
-               
-                
             </ul>
         </nav>
     )

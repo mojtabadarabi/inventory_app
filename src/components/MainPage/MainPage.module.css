@@ -1,8 +1,7 @@
 .section{
     background-color: #efefef;
     padding: 15px;
-    display: flex;
-    justify-content: space-between;
+    border-radius: 18px;
     color: #253646;
     direction: rtl;
     width: 80%;
