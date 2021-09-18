@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { toast } from 'react-toastify'
 import style from './products.module.css'
 
 function AddProductsGroup({prodcutsGroup,setprodcutsGroup}) {
@@ -8,6 +9,15 @@ function AddProductsGroup({prodcutsGroup,setprodcutsGroup}) {
         e.preventDefault()
         if (newGroup!==''&&newGroup!==' ') {
             setprodcutsGroup([...prodcutsGroup,newGroup])
+            toast.success('گروه بندی با موفقیت ثبت شد', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
             setnewGroup('')
         }
         else{

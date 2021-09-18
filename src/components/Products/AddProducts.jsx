@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import style from './products.module.css'
+import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 function AddProducts({products,setproducts,prodcutsGroup,setprodcutsGroup}) {
 
@@ -19,6 +21,15 @@ function AddProducts({products,setproducts,prodcutsGroup,setprodcutsGroup}) {
         }
         if (prodcutName!==''&&prodcutName!==' '&&productCompany!==''&&productCompany!==' '&&inventory>0&&productGrouping!==''&&productGrouping!==' ') {
             setproducts([...products,product])
+            toast.success('محصول با موفقیت ثبت شد', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
             setprodcutName('')
             setproductCompany('')
             setinventory(1)
