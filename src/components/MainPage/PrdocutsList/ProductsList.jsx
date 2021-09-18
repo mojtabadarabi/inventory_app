@@ -2,42 +2,8 @@ import React, { useState } from 'react'
 import style from './ProductsList.module.css'
 import Product from './Product'
 
-function ProductsList() {
-    const [products, setproducts] = useState([
-        {
-            id:0,
-            name:"ماست",
-            company:"سون",
-            grouping:'لبنیات',
-            inventory:"5 بسته",
-
-        },
-        {
-            id:1,
-            name:"برنج",
-            company:"طبیعت",
-            grouping:'مواد غذایی',
-            inventory:"60 کیلو",
-
-        },
-        {
-            id:2,
-            name:"کیک شکلاتی",
-            company:"تافی",
-            grouping:'کیک',
-            inventory:"3بسته",
-
-        },
-        {
-            id:3,
-            name:"نوشابه انرژی زا",
-            company:"night wolf",
-            grouping:'نوشیدنی',
-            inventory:"150 عدد",
-
-        },
-       
-    ])
+function ProductsList({products,setproducts}) {
+    
     return (
         <article className={style.container}>
             <div className={style.tableHeader}>
@@ -64,10 +30,9 @@ function ProductsList() {
                     </tr>
                 </thead>
                 <tbody>
-                    {
+                    {   
                         products.map(product=>(
                             <Product key={product.id} product={product}/>
-
                         ))
                     }
                 </tbody>

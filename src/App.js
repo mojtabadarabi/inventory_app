@@ -1,16 +1,15 @@
-const { default: NavBar } = require("./components/Navbar/NavBar");
-const { default: SideBarMenu } = require("./components/SideMenu/SideBarMenu");
+import { useState } from "react";
+import Layout from "./components/Layout/Layout";
 const { default: MaingPage } = require("./components/MainPage/MaingPage");
 
 function App() {
+
+  const [products, setproducts] = useState([])
+  const [prodcutsGroup, setprodcutsGroup] = useState([])
   return (
-    <div className="App">
-      <NavBar/>
-      <div style={{flexDirection:"row",display:"flex",width:"100%",height:"89vh"}}>
-        <MaingPage/>
-        <SideBarMenu/>
-      </div>
-    </div>
+    <Layout>
+      <MaingPage products={products} setproducts={setproducts} prodcutsGroup={prodcutsGroup} setprodcutsGroup={setprodcutsGroup}/>
+    </Layout>
   );
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Product({product}) {
+    console.log('product');
     return (
         <tr>
             <td>{product.name}</td>

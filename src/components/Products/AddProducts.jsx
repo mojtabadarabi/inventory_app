@@ -1,0 +1,55 @@
+import React, { useState } from 'react'
+import style from './products.module.css'
+
+function AddProducts({products,setproducts,prodcutsGroup,setprodcutsGroup}) {
+
+    
+    const [prodcutName, setprodcutName] = useState('')
+    const [productCompany, setproductCompany] = useState('')
+    const [inventory, setinventory] = useState(1)
+    const [productGrouping, setproductGrouping] = useState('')
+
+    function submitAddProductHandler(e) {
+        e.preventDefault()
+        const product = {
+            name:prodcutName,
+            company:productCompany,
+            inventory:inventory,
+            grouping:productGrouping,
+        }
+        if (prodcutName!==''&&prodcutName!==' '&&productCompany!==''&&productCompany!==' '&&inventory>0&&productGrouping!==''&&productGrouping!==' ') {
+            setproducts([...products,product])
+            setprodcutName('')
+            setproductCompany('')
+            setinventory(1)
+            setproductGrouping('')
+           
+        }
+        else{
+            alert('لطفا فیلد را پر کنید')
+        }
+
+    }
+
+    return (
+        <form name='form' className={style.addForm} onSubmit={(e)=>submitAddProductHandler(e)}>
+            <label htmlFor="form">  افزودن محصول جدید</label>
+            
+            <input type="text" value={prodcutName} onChange={(e)=>setprodcutName(e.target.value)} placeholder='نام محصول' className={style.inputTxt}/>
+            <input type="text" value={productCompany} onChange={(e)=>setproductCompany(e.target.value)} placeholder='شرکت محصول' className={style.inputTxt}/>
+            <input type="number" value={inventory} onChange={(e)=>setinventory(e.target.value)} placeholder='موجودی محصول' className={style.inputTxt}/>
+            <select className={style.inputTxt} type="text" value={productGrouping} onChange={(e)=>setproductGrouping(e.target.value)}>
+                <option value="default" hidden>  گروه محصول</option>
+                {
+                    prodcutsGroup.map((group,index)=>(
+                        <option key={index} value={group}>{group}</option>
+                    ))
+                }
+                  
+            </select>
+            <button type="submit" className={style.button}>افزودن محصول</button>
+        </form>
+    )
+}
+
+export default AddProducts
