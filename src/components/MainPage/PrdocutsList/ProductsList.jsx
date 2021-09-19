@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import style from './ProductsList.module.css'
 import Product from './Product'
+import SearchBox from '../../SearchBox/SearchBox'
 
-function ProductsList({products,setproducts}) {
+function ProductsList({products}) {
     
     return (
         <article className={style.container}>
@@ -10,15 +11,9 @@ function ProductsList({products,setproducts}) {
                 <span>
                 جدول محصولات موجود
                 </span>
-                <div>
-                    <select defaultValue='default' className={style.filterList}>
-                        <option value="default" hidden>دسته بندی در محصولات</option>
-                        <option value="name" className={style.filterOption}>بر اساس نام</option>
-                        <option value="company" className={style.filterOption}>بر اساس نام شزکت</option>
-                        <option value="count" className={style.filterOption}>بر اساس تعداد موجودی</option>
-                    </select>
-                </div>
+                
             </div>
+            
             <table className={style.table} >
                 <thead>
                     <tr>

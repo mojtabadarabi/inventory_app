@@ -5,12 +5,15 @@ import style from './layout.module.css'
 
 function Layout({children}) {
     return (
-        <div>
+        <div className={style.container}>
             <NavBar/>
-            <div className={style.container}>
-                {children}
+            <section className={style.section}>
+                <article className={style.article}>
+                    {children}
+
+                </article>
                 <SideBarMenu/>
-            </div>
+            </section>
         </div>
     )
 }

@@ -1,5 +1,21 @@
-.container{
-    display: flex;
+.section{
     height:93vh;
-   
+    background-color: #efefef;
+    padding: 15px;
+    border-radius: 18px;
+    color: #253646;
+    width: 100%;
+    padding: 0;
+    display: flex;
+}
+.article{
+    background-color: #efefef;
+    padding: 15px;
+    border-radius: 18px;
+    color: #253646;
+    direction: rtl;
+    width: 100%;
+}
+.container{
+    width: 100%;
 }

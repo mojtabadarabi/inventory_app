@@ -7,9 +7,36 @@ function AddProductsGroup({prodcutsGroup,setprodcutsGroup}) {
 
     function submitNewGroupHandler(e) {
         e.preventDefault()
-        if (newGroup!==''&&newGroup!==' ') {
-            setprodcutsGroup([...prodcutsGroup,newGroup])
-            toast.success('گروه بندی با موفقیت ثبت شد', {
+        const exist =prodcutsGroup.findIndex(group=>group===newGroup)
+        if (!!exist) {
+            if (newGroup!==''&&newGroup!==' ') {
+                setprodcutsGroup([...prodcutsGroup,newGroup])
+                toast.success('گروه بندی با موفقیت ثبت شد', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    });
+                setnewGroup('')
+            }
+            else{
+                toast.error('لطفا فیلد ها را با دقت پر کنید', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    });
+            }
+            
+        }
+        else{
+            toast.error('گروه بندی وجود دارد', {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -18,10 +45,6 @@ function AddProductsGroup({prodcutsGroup,setprodcutsGroup}) {
                 draggable: true,
                 progress: undefined,
                 });
-            setnewGroup('')
-        }
-        else{
-            alert('لطفا فیلد گروه بندی را پر کنید')
         }
     }
     return (

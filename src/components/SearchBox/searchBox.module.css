@@ -1,0 +1,48 @@
+.addForm{
+    padding: 8px;
+    justify-content: space-evenly;
+    display: flex;
+    border-radius: 8px;
+    margin: 35px auto;
+    position: relative;
+    border-bottom: 2px solid #5E4390;
+}
+.button{
+    outline: none;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    color: #efefef;
+    font-size: 18px;
+    margin: auto 8px;
+    background-color: #337AB7;
+    padding: 8px;
+    border-radius: 8px;
+    width: 125px;
+    margin-right: auto;
+}
+.addForm label{
+    position: absolute;
+    top: -22px;
+    right: 0;
+}
+.inputTxt{
+    outline: none;
+    font-size: 18px; 
+    direction: rtl;
+    width: 120px;
+    transition: all ease .5s;
+    padding: 8px;
+    border: none;
+    background-color: inherit;
+    border: 2px solid #5E4390;
+    margin: auto 8px;
+    border-radius: 8px;
+    color: #5E4390;
+    width: 150px;
+}
+
+.inputTxt::placeholder{
+    color: #5E4390;
+    
+}
