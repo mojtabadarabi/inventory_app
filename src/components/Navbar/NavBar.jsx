@@ -6,7 +6,7 @@ import { FaBell } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 
-function NavBar() {
+function NavBar({setOpenSideMenu}) {
     return (
         <nav className={style.navbar}>
             <div className={style.container}>
@@ -35,7 +35,7 @@ function NavBar() {
                         <span className={style.companyDescription}>مدیریت انبار </span>
                     </div>
                 </a>
-                <button className={style.button}>
+                <button className={style.button} onClick={()=>setOpenSideMenu(prevState=>!prevState)}>
                     <FaBars className={style.icon}/>
                 </button>
             </div>

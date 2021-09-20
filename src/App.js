@@ -13,6 +13,7 @@ function App() {
   const [prodcutsGroup, setprodcutsGroup] = useState([])
   const [searchBox, setsearchBox] = useState(false)
   const [searchResaultList, setsearchResaultList] = useState([])
+  const [OpenSideMenu, setOpenSideMenu] = useState(true)
   useEffect(() => {
     const localProductsList=JSON.parse(localStorage.getItem('products'))
     const localProductsGroupList=JSON.parse(localStorage.getItem('productsGroup'))
@@ -28,7 +29,7 @@ function removeProdcutsHandler(product) {
 }
   return (
     <BrowserRouter>
-      <Layout>
+      <Layout OpenSideMenu={OpenSideMenu} setOpenSideMenu={setOpenSideMenu}>
         <Switch>
           <Route path='/' exact render={()=><MaingPage products={products} setproducts={setproducts} prodcutsGroup={prodcutsGroup} setprodcutsGroup={setprodcutsGroup} searchBox={searchBox} setsearchBox={setsearchBox} />}/>
           <Route path='/search' render={()=><SearchBox products={products} setproducts={setproducts} prodcutsGroup={prodcutsGroup} searchResaultList={searchResaultList} setsearchResaultList={setsearchResaultList}/>}/>

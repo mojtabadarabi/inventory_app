@@ -3,16 +3,16 @@ import NavBar from '../Navbar/NavBar'
 import SideBarMenu from '../SideMenu/SideBarMenu'
 import style from './layout.module.css'
 
-function Layout({children}) {
+function Layout({children,OpenSideMenu,setOpenSideMenu}) {
     return (
         <div className={style.container}>
-            <NavBar/>
+            <NavBar setOpenSideMenu={setOpenSideMenu}/>
             <section className={style.section}>
                 <article className={style.article}>
                     {children}
 
                 </article>
-                <SideBarMenu/>
+                <SideBarMenu OpenSideMenu={OpenSideMenu}/>
             </section>
         </div>
     )
