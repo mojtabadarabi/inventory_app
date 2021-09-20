@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Layout from "./components/Layout/Layout";
 import { ToastContainer } from 'react-toastify';
 import { Route, Switch, withRouter } from "react-router";
@@ -17,7 +17,14 @@ function App() {
   const [prodcutsGroup, setprodcutsGroup] = useState([])
   const [searchBox, setsearchBox] = useState(false)
   const [searchResaultList, setsearchResaultList] = useState([])
-
+  useEffect(() => {
+    const localProductsList=JSON.parse(localStorage.getItem('products'))
+    const localProductsGroupList=JSON.parse(localStorage.getItem('productsGroup'))
+    if (!!localProductsList&&localProductsGroupList) {
+      setproducts(localProductsList)
+      setprodcutsGroup(localProductsGroupList)
+    }
+}, [])
   return (
     <BrowserRouter>
       <Layout>

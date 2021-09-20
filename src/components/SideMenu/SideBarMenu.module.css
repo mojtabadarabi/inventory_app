@@ -1,8 +1,8 @@
 .sideMenu{
-    background-color: #253646;
+    background-color: #FFFFFF;
     display: flex;
     justify-content: space-between;
-    color: #efefef;
+    color: #2f2f2f;
     width: 260px;
     direction: rtl;
     height: 100%;
@@ -16,7 +16,6 @@ ul{
   }
 a,a:hover{
     text-decoration: none;
-    color: #efefef;
     width: 100%;
     padding:0 8px;
     display: block;
@@ -24,10 +23,10 @@ a,a:hover{
     
 }
 a:hover{
-    color: #1D7EAA;
+    color: #2f2f2f;
 }
 a:focus{
-    color: #1D7EAA;
+    color: #2f2f2f;
 }
 li{
     width: 100%;
@@ -53,27 +52,27 @@ li:hover{
     0 100px 80px rgba(0, 0, 0, 0.12);
     margin-right: 20px;
     width: 90%;
-    color: #1D7EAA;
+    color: #2f2f2f;
 }
 .active{
-    color: #1D7EAA;
+    color: #2f2f2f;
     background-color: red;
 }
 .button{
     outline: none;
+    color: #6137EE;
     border: none;
     background-color: inherit;
     cursor: pointer;
-    color: #efefef;
     font-size: 18px;
     padding:auto 8px;
     text-decoration: none;
 }
 .button:focus{
-    color: #1D7EAA;
+    color: #2f2f2f;
 }
 .button:hover{
-    color: #1D7EAA;
+    color: #2f2f2f;
 }
 .icon{
     padding-left: 8px;

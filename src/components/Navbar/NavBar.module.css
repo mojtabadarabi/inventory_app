@@ -1,9 +1,9 @@
 .navbar{
-    background-color: #253646;
+    background-color: #FFFFFF;
     padding: 8px;
     display: flex;
     justify-content: space-between;
-    color: #efefef;
+    color: #2f2f2f;
     height: 36px;
 }
 a,a:hover{
@@ -29,12 +29,11 @@ a,a:hover{
     border: none;
     background-color: inherit;
     cursor: pointer;
-    color: #efefef;
     font-size: 18px;
     margin: auto 8px;
 }
 .divider{
-    background-color: #efefef;
+    background-color: #2f2f2f;
     width: 2px;
     opacity: .3;
     border-radius: 8px;
@@ -49,41 +48,42 @@ a,a:hover{
     right: -10px;
     padding: 1px 6px;
     border-radius: 50%;
-    background: red;
+    background: #947AF4;
     color: white;
   }
   .icon{
-    color:white;
+    opacity: .6;
     margin-top: 5px;
   }
   .inputText{
     outline: none;
-    background-color: inherit;
+    background-color: #F3F7FD;
     font-size: 18px; 
-    border: none;
+    border: 2px solid #947AF4;
     direction: rtl;
-    width: 120px;
+    width:120px;
     transition: all ease .5s;
     padding: 8px;
     border-radius: 8px;
+    color: #2f2f2f;
   }
   .inputText:focus{
-    background-color: #efefef;
-    width: 200px;
+    border: 2px solid #947AF4;
+    width:200px;
+  }
+  .inputText::placeholder{
+    color: #2f2f2f;
     
   }
 
-
-
 input::placeholder{
-    color: white;
+    color: #2f2f2f;
 }
-input:focus::placeholder{
-    color: black;
-}
+
 .logoContainer{
     display:grid;
     margin-top:-8px;
+    color: black;
 }
 .companyName{
     font-size:18px;

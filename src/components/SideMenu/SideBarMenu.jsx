@@ -13,42 +13,43 @@ function SideBarMenu() {
     return (
         <nav className={style.sideMenu}>
             <ul>
-                <li >
-                    <Link to='/' className={style.button}>
-                    <FaCreativeCommonsNd className={style.icon}/>
-                    داشبورد
-                    </Link>
-                </li>
-                <li >
-                    <Link to='/products' className={style.button}>
-                    <FaProductHunt className={style.icon}/>
-                    محصولات
-                    </Link>
-                </li>
-                <li >
-                    <Link to='/search' className={style.button}>
-                    <FaInbox className={style.icon}/>
-                    جستجو
-                    </Link>
-                </li>
-                <li >
-                    <button className={style.button}>
+                <Link to='/' className={style.button}>
+                    <li >
+                        <FaCreativeCommonsNd className={style.icon}/>
+                        داشبورد
+                    </li>
+                </Link>
+                <Link to='/products' className={style.button}>
+                    <li >
+                        <FaProductHunt className={style.icon}/>
+                        محصولات
+                    </li>
+                </Link>
+                <Link to='/search' className={style.button}>
+                    <li >
+                        <FaInbox className={style.icon}/>
+                        جستجو
+                    </li>
+                </Link>
+                <Link to='/search' className={style.button}>
+                    <li >
                     <FaCommentsDollar className={style.icon}/>
                     مشتری ها
-                    </button>
-                </li>
-                <li >
-                    <button className={style.button}>
+                    </li>
+                </Link>
+                <Link to='/search' className={style.button}>
+                    <li >
                     <FaBlind className={style.icon}/>
                     راهنمای سامانه 
-                    </button>
-                </li>
-                <li >
-                    <button className={style.button}>
+                    </li>
+                </Link>
+                <Link to='/search' className={style.button}>
+                    <li >
                     <FaCog className={style.icon}/>
                     تنظیمات
-                    </button>
-                </li>
+                    </li>
+                </Link>
+               
             </ul>
         </nav>
     )

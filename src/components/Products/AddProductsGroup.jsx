@@ -11,6 +11,7 @@ function AddProductsGroup({prodcutsGroup,setprodcutsGroup}) {
         if (!!exist) {
             if (newGroup!==''&&newGroup!==' ') {
                 setprodcutsGroup([...prodcutsGroup,newGroup])
+                localStorage.setItem('productsGroup',JSON.stringify([...prodcutsGroup,newGroup]))
                 toast.success('گروه بندی با موفقیت ثبت شد', {
                     position: "top-right",
                     autoClose: 5000,

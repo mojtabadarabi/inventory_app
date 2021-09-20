@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './products.module.css'
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
@@ -21,6 +21,7 @@ function AddProducts({products,setproducts,prodcutsGroup,setprodcutsGroup}) {
         }
             if (prodcutName!==''&&prodcutName!==' '&&productCompany!==''&&productCompany!==' '&&inventory>0&&productGrouping!==''&&productGrouping!==' ') {
                 setproducts([...products,product])
+                localStorage.setItem('products',JSON.stringify([...products,product]))
                 toast.success('محصول با موفقیت ثبت شد', {
                     position: "top-right",
                     autoClose: 5000,

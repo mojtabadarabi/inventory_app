@@ -8,7 +8,7 @@ import ProductsList from './PrdocutsList/ProductsList'
 
 function MaingPage({products,setproducts,prodcutsGroup,setprodcutsGroup,searchBox,setsearchBox}) {
     return (
-        <section className={style.section}>
+        <section >
 
             <PageHeader/>
 

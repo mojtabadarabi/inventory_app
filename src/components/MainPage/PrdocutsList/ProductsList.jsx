@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './ProductsList.module.css'
 import Product from './Product'
 import SearchBox from '../../SearchBox/SearchBox'
 
 function ProductsList({products}) {
-    
+
     return (
         <article className={style.container}>
             <div className={style.tableHeader}>

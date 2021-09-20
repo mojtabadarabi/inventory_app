@@ -1,6 +1,6 @@
 .section{
     height:93vh;
-    background-color: #efefef;
+    background-color: #F3F7FD;
     padding: 15px;
     border-radius: 18px;
     color: #253646;
@@ -9,7 +9,7 @@
     display: flex;
 }
 .article{
-    background-color: #efefef;
+    background-color: #F3F7FD;
     padding: 15px;
     border-radius: 18px;
     color: #253646;
