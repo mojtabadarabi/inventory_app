@@ -1,14 +1,10 @@
 import { useEffect, useState } from "react";
-import Layout from "./components/Layout/Layout";
-import { ToastContainer } from 'react-toastify';
-import { Route, Switch, withRouter } from "react-router";
+import { Route, Switch } from "react-router";
 import { BrowserRouter } from "react-router-dom";
-import ProductsList from "./components/MainPage/PrdocutsList/ProductsList";
-import SearchBox from "./components/SearchBox/SearchBox";
-import EdditProducts from "./components/Products/EdditProducts";
-import AddProducts from "./components/Products/AddProducts";
-import AddProductsGroup from "./components/Products/AddProductsGroup";
+import { ToastContainer } from 'react-toastify';
+import Layout from "./components/Layout/Layout";
 import Products from "./components/Products/Products";
+import SearchBox from "./components/SearchBox/SearchBox";
 const { default: MaingPage } = require("./components/MainPage/MaingPage");
   
 function App() {
@@ -25,13 +21,18 @@ function App() {
       setprodcutsGroup(localProductsGroupList)
     }
 }, [])
+function removeProdcutsHandler(product) {
+  const filteredList = products.filter(p=>p.id!==product.id)
+  setproducts(filteredList)
+  localStorage.setItem('products',JSON.stringify(filteredList))
+}
   return (
     <BrowserRouter>
       <Layout>
         <Switch>
           <Route path='/' exact render={()=><MaingPage products={products} setproducts={setproducts} prodcutsGroup={prodcutsGroup} setprodcutsGroup={setprodcutsGroup} searchBox={searchBox} setsearchBox={setsearchBox} />}/>
           <Route path='/search' render={()=><SearchBox products={products} setproducts={setproducts} prodcutsGroup={prodcutsGroup} searchResaultList={searchResaultList} setsearchResaultList={setsearchResaultList}/>}/>
-          <Route path='/products' render={()=>(<Products products={products} setproducts={setproducts} prodcutsGroup={prodcutsGroup} setprodcutsGroup={setprodcutsGroup} />)}/>
+          <Route path='/products' render={()=>(<Products products={products} setproducts={setproducts} prodcutsGroup={prodcutsGroup} setprodcutsGroup={setprodcutsGroup} removeProdcutsHandler={removeProdcutsHandler}/>)}/>
           
 
         </Switch>

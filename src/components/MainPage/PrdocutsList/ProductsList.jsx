@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import style from './ProductsList.module.css'
+import React from 'react'
 import Product from './Product'
-import SearchBox from '../../SearchBox/SearchBox'
+import style from './ProductsList.module.css'
 
-function ProductsList({products}) {
+function ProductsList({products,removeProdcutsHandler}) {
 
     return (
         <article className={style.container}>
@@ -20,17 +19,35 @@ function ProductsList({products}) {
                         <td>محصول</td>
                         <td>شرکت</td>
                         <td>موجودی</td>
+                        <td>تاریخ ثبت</td>
                         <td>دسته بندی</td>
-                        <td>حذف</td>
+                        <td></td>
                     </tr>
+                    
                 </thead>
                 <tbody>
-                    {   
-                        products.map(product=>(
-                            <Product key={product.id} product={product}/>
-                        ))
-                    }
+                        {
+                            products.length===0?(
+                                <tr>
+                                    <td colSpan="5">
+                                        محصولی وجود ندارد
+                                    </td>
+                                </tr>
+                            ):(
+                                products.map(product=>(
+                                    <Product key={product.id} product={product} removeProdcutsHandler={removeProdcutsHandler}/>
+                                ))
+                            )
+                                
+                            
+                                
+                        }
+                            
+                        
                 </tbody>
+                            
+                        
+                    
             </table>
         </article>
     )

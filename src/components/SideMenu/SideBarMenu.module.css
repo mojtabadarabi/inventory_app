@@ -25,9 +25,7 @@ a,a:hover{
 a:hover{
     color: #2f2f2f;
 }
-a:focus{
-    color: #2f2f2f;
-}
+
 li{
     width: 100%;
     list-style: none;
@@ -42,6 +40,9 @@ li{
 svg{
     margin: auto 0;
 }
+.active{
+    color: #1f1f1f !important;
+}
 li:hover{
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -50,9 +51,9 @@ li:hover{
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
-    margin-right: 20px;
+    margin-right: 15px;
     width: 90%;
-    color: #2f2f2f;
+ 
 }
 .active{
     color: #2f2f2f;
@@ -68,12 +69,8 @@ li:hover{
     padding:auto 8px;
     text-decoration: none;
 }
-.button:focus{
-    color: #2f2f2f;
-}
-.button:hover{
-    color: #2f2f2f;
-}
+
+
 .icon{
     padding-left: 8px;
 }

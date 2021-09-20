@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 import ProductsList from '../MainPage/PrdocutsList/ProductsList'
 import style from './searchBox.module.css'
@@ -11,9 +11,11 @@ function SearchBox({products,prodcutsGroup,searchResaultList,setsearchResaultLis
 
     function submitSearchProductHandler(e) {
         e.preventDefault()
-        if (prodcutName!==''&&prodcutName!==' '||productCompany!==''&&productCompany!==' '||productGrouping!==''&&productGrouping!==' ') {
+        if (((prodcutName!=='')&&(prodcutName!==' '))||((productCompany!=='')&&(productCompany!==' '))||((productGrouping!=='')&&(productGrouping!==' '))) {
             const resaultArray=products.filter((p) =>  (!!prodcutName?p.name ===prodcutName:true)&&(!!productCompany?p.company === productCompany:true)&& (!!productGrouping?p.grouping ===productGrouping:true));
+            
             setsearchResaultList(resaultArray)
+            
         }
         else{
             toast.error('لطفا حداقل یک فیلد وارد کنید', {

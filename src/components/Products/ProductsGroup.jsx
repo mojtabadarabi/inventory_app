@@ -1,11 +1,12 @@
-import React from 'react'
-import style from './products.module.css'
+import React from 'react';
 import { BsFillBackspaceReverseFill } from "react-icons/bs";
+import style from './products.module.css';
 
 function ProductsGroup({prodcutsGroup,setprodcutsGroup}) {
     function removeGroupHandler(group) {
         const filteredGroup = prodcutsGroup.filter(groupListName=>groupListName!==group)
         setprodcutsGroup(filteredGroup)
+        localStorage.setItem('productsGroup',JSON.stringify(filteredGroup))
     }
     return (
         <div>

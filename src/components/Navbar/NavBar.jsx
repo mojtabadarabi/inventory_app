@@ -10,9 +10,9 @@ function NavBar() {
     return (
         <nav className={style.navbar}>
             <div className={style.container}>
-                <img src={avatar} className={style.avatar}/>
+                <img alt='avatar' src={avatar} className={style.avatar}/>
                 <button className={style.button}>
-                    مجتبی دارابی <FaAngleDoubleDown className={style.icon}/>
+                     کاربر  <FaAngleDoubleDown className={style.icon}/>
                 </button>
                 <div className={style.divider}></div>
                 
@@ -29,7 +29,7 @@ function NavBar() {
                     </button>
                     <input className={style.inputText} type="text" placeholder='جستجو در انبار'/>
                 </form>
-                <a href='#' className={`${style.button} ${style.marginY}`} >
+                <a href='/' className={`${style.button} ${style.marginY}`} >
                     <div className={style.logoContainer}>
                         <span className={style.companyName}>انبار دار </span>
                         <span className={style.companyDescription}>مدیریت انبار </span>

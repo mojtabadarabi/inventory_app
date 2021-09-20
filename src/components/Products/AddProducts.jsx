@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import style from './products.module.css'
-import 'react-toastify/dist/ReactToastify.css';
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import style from './products.module.css';
+const persianDate = require('persian-date');
 
 function AddProducts({products,setproducts,prodcutsGroup,setprodcutsGroup}) {
 
-    
     const [prodcutName, setprodcutName] = useState('')
     const [productCompany, setproductCompany] = useState('')
     const [inventory, setinventory] = useState(1)
@@ -14,11 +14,14 @@ function AddProducts({products,setproducts,prodcutsGroup,setprodcutsGroup}) {
     function submitAddProductHandler(e) {
         e.preventDefault()
         const product = {
+            id:Math.ceil(Math.random()*1000),
             name:prodcutName,
             company:productCompany,
             inventory:inventory,
             grouping:productGrouping,
+            date:new persianDate(new Date()).toLocale('fa').format("L")
         }
+        console.log(product);
             if (prodcutName!==''&&prodcutName!==' '&&productCompany!==''&&productCompany!==' '&&inventory>0&&productGrouping!==''&&productGrouping!==' ') {
                 setproducts([...products,product])
                 localStorage.setItem('products',JSON.stringify([...products,product]))
