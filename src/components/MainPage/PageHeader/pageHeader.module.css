@@ -10,3 +10,22 @@
     margin:15px;
     background-color:#fff;
 }
+.header span span{
+    display: inline;
+}
+
+/* media */
+@media(max-width:700px){
+    .header{
+        display: block;
+    }
+    
+   
+}
+@media(max-width:300px){
+    .header span span{
+        display: block;
+    }
+    
+   
+}

@@ -3,7 +3,7 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
- 
+    overflow-x: auto;
     box-shadow: 0 10px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
     border-radius: 8px;
 }
@@ -72,7 +72,7 @@ table{
     border: none;
     padding:5px;
     border-spacing: 0 8px;
-    
+    table-layout: fixed;
 }
 
 thead{
@@ -108,3 +108,56 @@ input[type="checkbox"]:hover {
 input[type="checkbox"]:checked {
     background-color: #2196F3;
 }
+
+
+
+@media screen and (max-width: 1200px) {
+    .table tr td button{
+        display: block;
+        width: 100%;
+        margin: 5px auto;
+    }
+    table {
+      border: 0;
+    }
+  
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: left;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: right;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+
+  }

@@ -15,7 +15,16 @@
     color: #253646;
     direction: rtl;
     width: 100%;
+    overflow-y: scroll;
 }
+::-webkit-scrollbar{
+    background-color: #F3F7FD;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #B6B9BE;
+    border-radius: 8px;
+}
+
 .container{
     width: 100%;
 }

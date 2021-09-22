@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import style from './products.module.css';
+import { DropdownMultiple, Dropdown } from 'reactjs-dropdown-component';
 const persianDate = require('persian-date');
 
 function AddProducts({products,setproducts,prodcutsGroup,setprodcutsGroup}) {
@@ -56,7 +57,7 @@ function AddProducts({products,setproducts,prodcutsGroup,setprodcutsGroup}) {
     }
 
     return (
-        <form name='form' className={style.addForm} onSubmit={(e)=>submitAddProductHandler(e)}>
+        <form name='form' className={`${style.addForm} ${style.addProducts}`} onSubmit={(e)=>submitAddProductHandler(e)}>
             <label htmlFor="form">  افزودن محصول جدید</label>
             <div>
                 <input type="text" value={prodcutName} onChange={(e)=>setprodcutName(e.target.value)} placeholder='نام محصول' className={style.inputTxt}/>

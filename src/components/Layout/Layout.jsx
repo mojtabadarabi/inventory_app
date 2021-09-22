@@ -8,7 +8,7 @@ function Layout({children,OpenSideMenu,setOpenSideMenu}) {
         <div className={style.container}>
             <NavBar setOpenSideMenu={setOpenSideMenu}/>
             <section className={style.section}>
-                <article className={style.article}>
+                <article className={style.article} >
                     {children}
 
                 </article>

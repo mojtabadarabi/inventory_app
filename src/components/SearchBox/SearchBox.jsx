@@ -33,7 +33,7 @@ function SearchBox({products,prodcutsGroup,searchResaultList,setsearchResaultLis
     }
     return (
         <React.Fragment>
-            <form name='form' className={style.addForm} onSubmit={(e)=>submitSearchProductHandler(e)}>
+            <form name='form' className={`${style.addForm} ${style.searchForm}`} onSubmit={(e)=>submitSearchProductHandler(e)}>
                 <label htmlFor="form">  جستجوی محصول   </label>
                 <input type="text" value={prodcutName} onChange={(e)=>setprodcutName(e.target.value)} placeholder='نام محصول' className={style.inputTxt}/>
                 <input type="text" value={productCompany} onChange={(e)=>setproductCompany(e.target.value)} placeholder='شرکت محصول' className={style.inputTxt}/>

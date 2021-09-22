@@ -17,6 +17,7 @@ a,a:hover{
     display: flex;
     justify-content: space-around;
     text-align: center;
+    position: relative;
 }
 .avatar{
     width: 40px;
@@ -90,4 +91,25 @@ input::placeholder{
 }
 .companyDescription{
     font-size:14px;
+}
+
+
+
+
+
+/* media */
+@media(max-width:700px){
+    .logoContainer span{
+        font-size: 14px;
+    }
+    
+   
+}
+@media(max-width:310px){
+    
+    .logo{
+        display: none;
+    }
+    
+   
 }

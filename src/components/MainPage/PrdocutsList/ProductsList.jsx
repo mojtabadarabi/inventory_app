@@ -16,12 +16,12 @@ function ProductsList({products,removeProdcutsHandler}) {
             <table className={style.table} >
                 <thead>
                     <tr>
-                        <td>محصول</td>
-                        <td>شرکت</td>
-                        <td>موجودی</td>
-                        <td>تاریخ ثبت</td>
-                        <td>دسته بندی</td>
-                        <td></td>
+                        <th scope="col">محصول</th>
+                        <th scope="col">شرکت</th>
+                        <th scope="col">موجودی</th>
+                        <th scope="col">تاریخ ثبت</th>
+                        <th scope="col">دسته بندی</th>
+                        <th scope="col"></th>
                     </tr>
                     
                 </thead>

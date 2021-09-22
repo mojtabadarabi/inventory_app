@@ -4,6 +4,7 @@
     margin: 10px;
 }
 .addForm{
+    
     padding: 8px;
     justify-content: space-evenly;
     display: flex;
@@ -18,13 +19,15 @@
     top: -22px;
     right: 0;
 }
+
 .inputTxt{
+    
     outline: none;
     font-size: 18px; 
     direction: rtl;
     width: 120px;
     transition: all ease .2s;
-    padding: 8px;
+    padding: 8px 0;
     border: none;
     background-color: #FFFFFF;
     border: 2px solid #C5CAD7;
@@ -42,8 +45,16 @@
     border: 2px solid black;
 }
 
-input[type='number']::-webkit-inner-spin-button{
-    display: none;
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 .button{
     outline: none;
@@ -72,4 +83,41 @@ input[type='number']::-webkit-inner-spin-button{
     background-color: inherit;
     margin: auto 4px;
     padding: 0;
+}
+
+/* media */
+
+@media(max-width:1200px){
+    .addProducts{
+        display: block;
+    }
+    .addGroup{
+        display: block;
+    }
+    .addGroup input {
+        width: 100%;
+        margin: 8px auto;
+        display: block;
+    }
+    .addGroup button {
+        width: 100%;
+        margin: 8px auto;
+    }
+    .addProducts div input{
+        width: 100%;
+        margin: 8px auto;
+        display: block;
+    }
+    
+    .addProducts div select{
+        width: 100%;
+        margin: 0;
+    }
+    .addProducts button{
+        width: 100%;
+        margin: 8px auto;
+    }
+
+    
+   
 }

@@ -26,7 +26,7 @@ a:hover{
     color: #2f2f2f;
 }
 
-li{
+.button li{
     width: 100%;
     list-style: none;
     font-size: 20px;
@@ -52,7 +52,7 @@ svg{
 .sideMenuHide{
     width: 56px;
 }
-li:hover{
+.button li:hover{
     margin-right: 15px;
     width: 90%;
  
@@ -76,4 +76,17 @@ li:hover{
 .icon{
     padding-left: 8px;
     
+}
+
+
+/* media */
+@media(max-width:700px){
+    .sideMenu{
+        width: 56px;
+    }
+    .sideMenu ul  li span{
+        display: none;
+    }
+    
+   
 }

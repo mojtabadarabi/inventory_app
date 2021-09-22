@@ -1,0 +1,95 @@
+.menuContainer{
+   
+    z-index: 2;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 8px;
+    transition: all ease .5s;
+    position: absolute;
+    left: 25px;
+    top: 55px;
+    transition: all ease .5s;
+    height: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+}
+.menuContainer ul li {
+    display: flex;
+    text-align: right;
+    cursor: pointer;
+    padding: 10px;
+    transition: ease all .5s;
+}
+.underLine div::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #6137EE;
+    display: block;
+    margin: auto;
+    transition: all ease .5s;
+}
+.underLine:hover div::after{
+    width: 100%;
+}
+.menuContainer ul {
+    box-sizing: border-box;
+    transition: all ease .5s;
+}
+.menuContainer ul li:hover {
+    color: #6137EE;
+}
+.openMenu{
+    height: 250px !important;
+    background-color: #F3F7FD !important;
+}
+.hideMenu{
+    height: 0px;
+    /* z-index: -1; */
+}
+span{
+    font-weight: 600;
+}
+.infoContainer{
+    flex-direction: column;
+    display: flex;
+    margin: auto 10px;
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.exitBtn{
+    display: block !important;
+
+}
+.button{
+    width: 100%;
+    padding: 8px 12px;
+    margin: 3px;
+    outline: none;
+    border: none;
+ 
+    
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid crimson;
+    transition: all ease .5s;
+    background: transparent;
+}
+.button:hover{
+    background: crimson;
+    color: #fff;
+    border: 2px solid transparent;
+
+}
+.notification{
+    /* left: 200px !important; */
+    width: 270px;
+    overflow: auto;
+}
+.aaa{
+    background-color: red;
+}
