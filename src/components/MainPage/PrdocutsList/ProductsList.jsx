@@ -2,8 +2,7 @@ import React from 'react'
 import Product from './Product'
 import style from './ProductsList.module.css'
 
-function ProductsList({products,removeProdcutsHandler}) {
-
+function ProductsList({products,removeProdcutsHandler,changeProductHandler}) {
     return (
         <article className={style.container}>
             <div className={style.tableHeader}>
@@ -35,7 +34,7 @@ function ProductsList({products,removeProdcutsHandler}) {
                                 </tr>
                             ):(
                                 products.map(product=>(
-                                    <Product key={product.id} product={product} removeProdcutsHandler={removeProdcutsHandler}/>
+                                    <Product key={product.id} product={product} removeProdcutsHandler={removeProdcutsHandler} changeProductHandler={changeProductHandler}/>
                                 ))
                             )
                                 

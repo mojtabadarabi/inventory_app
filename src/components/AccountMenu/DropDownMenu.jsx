@@ -5,11 +5,7 @@ export default function DropDownMenu({children,className,notificationStyle,isOpe
     const ref = useRef()
     useEffect(() => {
         const checkIfClickedOutside = e => {
-          // If the menu is open and the clicked target is not within the menu,
-          // then close the menu
           if (isOpenMenu && ref.current && !ref.current.contains(e.target)) {
-            // setIsMenuOpen(false)
-            console.log('out side!!!');
             ref.current.className+='hideMenu'
             setOpenMenu(prevState=>!prevState)
           }
@@ -18,7 +14,6 @@ export default function DropDownMenu({children,className,notificationStyle,isOpe
         document.addEventListener("mousedown", checkIfClickedOutside)
     
         return () => {
-          // Cleanup the event listener
           document.removeEventListener("mousedown", checkIfClickedOutside)
         }
       }, [isOpenMenu])

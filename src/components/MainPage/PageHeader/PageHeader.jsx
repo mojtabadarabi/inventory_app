@@ -6,7 +6,6 @@ function PageHeader() {
     const date=new persianDate(new Date()).toLocale('fa').format("l")
     const day=new persianDate(new Date()).toLocale('fa').format("dddd")
     const month=new persianDate(new Date()).toLocale('fa').format("MMMM")
-    console.log(date);
     return (
         <header className={style.header}>
             <span >خوش آمدید</span>

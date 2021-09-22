@@ -9,7 +9,7 @@
     top: 55px;
     transition: all ease .5s;
     height: 0;
-    overflow: hidden;
+    overflow: auto;
     box-sizing: border-box;
     
 }
@@ -44,8 +44,7 @@
     background-color: #F3F7FD !important;
 }
 .hideMenu{
-    height: 0px;
-    /* z-index: -1; */
+    height:0px;
 }
 span{
     font-weight: 600;
@@ -86,10 +85,6 @@ span{
 
 }
 .notification{
-    /* left: 200px !important; */
     width: 270px;
     overflow: auto;
-}
-.aaa{
-    background-color: red;
 }

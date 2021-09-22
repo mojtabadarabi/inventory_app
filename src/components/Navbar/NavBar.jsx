@@ -1,13 +1,9 @@
-import React, { useState } from 'react'
-import style from './NavBar.module.css'
-import avatar from './img.png'
-import { FaAngleDoubleDown } from "react-icons/fa";
-import { FaBell } from "react-icons/fa";
-import { FaSearch } from "react-icons/fa";
-import { FaBars } from "react-icons/fa";
+import React, { useState } from 'react';
+import { FaBars, FaBell } from "react-icons/fa";
 import AccountMenu from '../AccountMenu/AccountMenu';
 import Notification from '../AccountMenu/Notification';
-import DropDownMenu from '../AccountMenu/DropDownMenu';
+import avatar from './img.png';
+import style from './NavBar.module.css';
 
 function NavBar({setOpenSideMenu}) {
     const [showAccountMenu, setshowAccountMenu] = useState(false)
@@ -24,8 +20,8 @@ function NavBar({setOpenSideMenu}) {
                 <div className={style.divider}></div>
                 
                 <button className={`${style.button} ${style.positionRelative}`} onClick={()=>setshowNotificationMenu(prevState=>!prevState)} >
-                    <span className={style.badge}>3</span>
-                    <FaBell className={style.icon}/>
+                    <span id='notification' className={style.badge}>3</span>
+                    <FaBell id='notification' className={style.icon}/>
                 </button>
             </div>
             

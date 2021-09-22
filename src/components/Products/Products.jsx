@@ -5,13 +5,13 @@ import AddProductsGroup from './AddProductsGroup'
 import EdditProducts from './EdditProducts'
 import ProductsGroup from './ProductsGroup'
 
-function Products({products,setproducts,prodcutsGroup,setprodcutsGroup,removeProdcutsHandler}) {
+function Products({setproducts,prodcutName,setprodcutName,productCompany,setproductCompany,inventory,setinventory,productGrouping,setproductGrouping,submitAddProductHandler,products,prodcutsGroup,setprodcutsGroup,removeProdcutsHandler,changeProductHandler}) {
     return (
     <EdditProducts>
-        <AddProducts products={products} setproducts={setproducts} prodcutsGroup={prodcutsGroup} setprodcutsGroup={setprodcutsGroup}/>
+        <AddProducts prodcutName={prodcutName} setprodcutName={setprodcutName} productCompany={productCompany} setproductCompany={setproductCompany} inventory={inventory} setinventory={setinventory} productGrouping={productGrouping} setproductGrouping={setproductGrouping} submitAddProductHandler={submitAddProductHandler} products={products} setproducts={setproducts} prodcutsGroup={prodcutsGroup} setprodcutsGroup={setprodcutsGroup} submitAddProductHandler={submitAddProductHandler} prodcutsGroup={prodcutsGroup}/>
         <AddProductsGroup prodcutsGroup={prodcutsGroup} setprodcutsGroup={setprodcutsGroup}/>
         <ProductsGroup prodcutsGroup={prodcutsGroup} setprodcutsGroup={setprodcutsGroup}/>
-        <ProductsList products={products} removeProdcutsHandler={removeProdcutsHandler}/>
+        <ProductsList products={products} removeProdcutsHandler={removeProdcutsHandler} changeProductHandler={changeProductHandler}/>
       </EdditProducts>
     )
 }
