@@ -3,9 +3,9 @@ import { Route, Switch } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import { toast, ToastContainer } from 'react-toastify';
 import Layout from "./components/Layout/Layout";
-import Product from "./components/MainPage/PrdocutsList/Product";
 import Products from "./components/Products/Products";
 import SearchBox from "./components/SearchBox/SearchBox";
+import 'react-toastify/dist/ReactToastify.css';
 const persianDate = require('persian-date');
 const { default: MaingPage } = require("./components/MainPage/MaingPage");
   
@@ -82,7 +82,6 @@ function changeProductHandler(product) {
   setinventory(product.inventory)
   setproductGrouping(product.grouping)
   removeProdcutsHandler(product)
-  window.scrollTo(0, 0)
 }
 function removeProdcutsHandler(product) {
   const filteredList = products.filter(p=>p.id!==product.id)
@@ -97,7 +96,7 @@ function removeProdcutsHandler(product) {
         <Switch>
           <Route path='/' exact render={()=><MaingPage products={products} setproducts={setproducts} prodcutsGroup={prodcutsGroup} setprodcutsGroup={setprodcutsGroup} searchBox={searchBox} setsearchBox={setsearchBox} />}/>
           <Route path='/search' render={()=><SearchBox products={products} setproducts={setproducts} prodcutsGroup={prodcutsGroup} searchResaultList={searchResaultList} setsearchResaultList={setsearchResaultList}/>}/>
-          <Route path='/products' render={()=>(<Products setproducts={setproducts} prodcutName={prodcutName} setprodcutName={setprodcutName} productCompany={productCompany} setproductCompany={setproductCompany} inventory={inventory} setinventory={setinventory} productGrouping={productGrouping} setproductGrouping={setproductGrouping} submitAddProductHandler={submitAddProductHandler} products={products} setproducts={setproducts} prodcutsGroup={prodcutsGroup} setprodcutsGroup={setprodcutsGroup} removeProdcutsHandler={removeProdcutsHandler} changeProductHandler={changeProductHandler} />)}/>
+          <Route path='/products' render={()=>(<Products prodcutName={prodcutName} setprodcutName={setprodcutName} productCompany={productCompany} setproductCompany={setproductCompany} inventory={inventory} setinventory={setinventory} productGrouping={productGrouping} setproductGrouping={setproductGrouping} submitAddProductHandler={submitAddProductHandler} products={products} setproducts={setproducts} prodcutsGroup={prodcutsGroup} setprodcutsGroup={setprodcutsGroup} removeProdcutsHandler={removeProdcutsHandler} changeProductHandler={changeProductHandler} />)}/>
            
 
         </Switch>

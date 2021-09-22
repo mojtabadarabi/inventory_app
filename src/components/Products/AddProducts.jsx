@@ -1,59 +1,8 @@
-import React, { useState } from 'react';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React from 'react';
 import style from './products.module.css';
-const persianDate = require('persian-date');
 
 function AddProducts({prodcutName,setprodcutName,productCompany,setproductCompany,inventory,setinventory,productGrouping,setproductGrouping,submitAddProductHandler,prodcutsGroup}) {
 
-    // const [prodcutName, setprodcutName] = useState('')
-    // const [productCompany, setproductCompany] = useState('')
-    // const [inventory, setinventory] = useState(1)
-    // const [productGrouping, setproductGrouping] = useState('')
-
-    // function submitAddProductHandler(e) {
-    //     e.preventDefault()
-    //     const product = {
-    //         id:Math.ceil(Math.random()*1000),
-    //         name:prodcutName,
-    //         company:productCompany,
-    //         inventory:inventory,
-    //         grouping:productGrouping,
-    //         date:new persianDate(new Date()).toLocale('fa').format("L")
-    //     }
-    //     console.log(product);
-    //         if (prodcutName!==''&&prodcutName!==' '&&productCompany!==''&&productCompany!==' '&&inventory>0&&productGrouping!==''&&productGrouping!==' ') {
-    //             setproducts([...products,product])
-    //             localStorage.setItem('products',JSON.stringify([...products,product]))
-    //             toast.success('محصول با موفقیت ثبت شد', {
-    //                 position: "top-right",
-    //                 autoClose: 5000,
-    //                 hideProgressBar: false,
-    //                 closeOnClick: true,
-    //                 pauseOnHover: true,
-    //                 draggable: true,
-    //                 progress: undefined,
-    //                 });
-    //             setprodcutName('')
-    //             setproductCompany('')
-    //             setinventory(1)
-    //             setproductGrouping('')
-               
-    //         }
-    //         else{
-    //             toast.error('لطفا فیلد ها را با دقت پر کنید', {
-    //                 position: "top-right",
-    //                 autoClose: 5000,
-    //                 hideProgressBar: false,
-    //                 closeOnClick: true,
-    //                 pauseOnHover: true,
-    //                 draggable: true,
-    //                 progress: undefined,
-    //                 });
-    //         }
-       
-
-    // }
 
     return (
         <form name='form' className={`${style.addForm} ${style.addProducts}`} onSubmit={(e)=>submitAddProductHandler(e)}>
