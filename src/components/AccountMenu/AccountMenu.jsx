@@ -4,6 +4,7 @@ import avatar from '../Navbar/img.png'
 import DropDownMenu from './DropDownMenu'
 
 function AccountMenu({className,isOpenMenu,setOpenMenu}) {
+
     return (
         <DropDownMenu className={className} isOpenMenu={isOpenMenu} setOpenMenu={setOpenMenu}>
              <li className={style.underLine}>

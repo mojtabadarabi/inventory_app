@@ -3,6 +3,7 @@ import style from './accountMenu.module.css'
 import DropDownMenu from './DropDownMenu'
 
 function Notification({className,isOpenMenu,setOpenMenu}) {
+
     return (
         <DropDownMenu className={className} notificationStyle={'notification'} isOpenMenu={isOpenMenu} setOpenMenu={setOpenMenu}>
              <li className={style.underLine} >

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {   useState } from 'react';
 import { FaBars, FaBell } from "react-icons/fa";
 import AccountMenu from '../AccountMenu/AccountMenu';
 import Notification from '../AccountMenu/Notification';
@@ -8,6 +8,8 @@ import style from './NavBar.module.css';
 function NavBar({setOpenSideMenu}) {
     const [showAccountMenu, setshowAccountMenu] = useState(false)
     const [showNotificationMenu, setshowNotificationMenu] = useState(false)
+    
+    
     return (
         <nav className={style.navbar}>
             <div className={style.container}>
